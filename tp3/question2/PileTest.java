@@ -21,7 +21,6 @@ public class PileTest extends junit.framework.TestCase {
         assertEquals(2, p.taille());
         p.empiler(1);
         assertEquals(3, p.taille());
-
         assertEquals(true, p.estPleine());
         assertEquals(p.taille(), p.capacite());
         try {
@@ -35,7 +34,6 @@ public class PileTest extends junit.framework.TestCase {
     public void test_Pile_sommet() throws Exception {
         PileI p = new question2.Pile(3);
         assertEquals(true, p.estVide());
-
         p.empiler(new Integer(3));
         assertEquals(" sommet ?? ", new Integer(3), p.sommet());
         assertEquals(1, p.taille());
@@ -63,31 +61,24 @@ public class PileTest extends junit.framework.TestCase {
         assertEquals("toString incorrect ? ", "[5, 4]", pile1.toString());
         pile1.empiler(3);
         assertEquals("toString incorrect ? ", "[3, 5, 4]", pile1.toString());
-
     }
 
     public void test_Pile_TailleNegative() {
         PileI p = new question2.Pile(-3);
         assertEquals(p.CAPACITE_PAR_DEFAUT, p.capacite());
-
     }
 
     public void test_Pile_equals() throws Exception {
-
         p1.empiler(3);
         p1.empiler(2);
         p1.empiler(1);
-
         p2.empiler(3);
         p2.empiler(2);
         p2.empiler(1);
-
         assertTrue("égalité de deux piles ? ", p1.equals(p2));
         assertTrue("égalité de deux piles ? ", p2.equals(p1));
         assertTrue("égalité de deux piles ? ", p1.equals(p1));
-
         p2.empiler(1);
         assertFalse("égalité de deux piles ? ", p1.equals(p2));
-
     }
 }

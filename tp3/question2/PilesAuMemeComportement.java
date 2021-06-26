@@ -7,12 +7,7 @@ public class PilesAuMemeComportement extends junit.framework.TestCase {
     private question2.PileI p3;
     private question2.PileI p4;
 
-    /**
-     * Met en place les engagements.
-     *
-     * Méthode appelée avant chaque appel de méthode de test.
-     */
-    protected void setUp() // throws java.lang.Exception
+    protected void setUp() 
     {
         p1 = new question2.Pile(PileI.CAPACITE_PAR_DEFAUT);
         p2 = new question2.Pile2(PileI.CAPACITE_PAR_DEFAUT);
@@ -20,22 +15,16 @@ public class PilesAuMemeComportement extends junit.framework.TestCase {
         p4 = new question2.Pile4(PileI.CAPACITE_PAR_DEFAUT);
     }
 
-    /**
-     * Supprime les engagements
-     *
-     * Méthode appelée après chaque appel de méthode de test.
-     */
-    protected void tearDown() // throws java.lang.Exception
-    {
-        //Libérez ici les ressources engagées par setUp()
-    }
-
     public void test_Sommaire()  throws Exception {
 
-        p4.empiler("b");p4.empiler("a");
-        p3.empiler("b");p3.empiler("a");
-        p2.empiler("b");p2.empiler("a");
-        p1.empiler("b");p1.empiler("a");
+        p4.empiler("b");
+        p4.empiler("a");
+        p3.empiler("b");
+        p3.empiler("a");
+        p2.empiler("b");
+        p2.empiler("a");
+        p1.empiler("b");
+        p1.empiler("a");
 
         assertEquals(p1.capacite(), p2.capacite());
         assertEquals(p2.capacite(), p3.capacite());
@@ -63,7 +52,7 @@ public class PilesAuMemeComportement extends junit.framework.TestCase {
         p2.empiler("aze");
         p1.empiler("aze");
 
-        assertEquals("p1.capacité() == p2.capacité() ??",p1.capacite(), p2.capacite());
+        assertEquals("p1.capacite() == p2.capacite() ??",p1.capacite(), p2.capacite());
         assertEquals("p2.capacite() == p3.capacite() ??",p2.capacite(), p3.capacite());
         assertEquals("p3.capacite() == p4.capacite() ??",p3.capacite(), p4.capacite());
 
@@ -125,9 +114,9 @@ public class PilesAuMemeComportement extends junit.framework.TestCase {
         assertEquals("p1.estPleine() != p2.estPleine() ??? ",p1.estPleine(), p2.estPleine());
         assertEquals("p2.estPleine()!=  p3.estPleine() ??? ",p2.estPleine(), p3.estPleine());
 
-        assertEquals(" différence sur la taille() ?? ",p1.taille(), p2.taille());
-        assertEquals(" différence sur la taille() ?? ",p2.taille(), p3.taille());
-        assertEquals(" différence  sur la taille() ?? ",p3.taille(), p4.taille());
+        assertEquals(" difference sur la taille() ?? ",p1.taille(), p2.taille());
+        assertEquals(" difference sur la taille() ?? ",p2.taille(), p3.taille());
+        assertEquals(" difference  sur la taille() ?? ",p3.taille(), p4.taille());
 
         p4.empiler("azer");
         p3.empiler("azer");
@@ -167,9 +156,9 @@ public class PilesAuMemeComportement extends junit.framework.TestCase {
         assertEquals("p1.estPleine() != p2.estPleine() ??? ",p1.estPleine(), p2.estPleine());
         assertEquals("p2.estPleine()!=  p3.estPleine() ??? ",p2.estPleine(), p3.estPleine());
 
-        assertEquals(" différence sur la taille() ?? ",p1.taille(), p2.taille());
-        assertEquals(" différence sur la taille() ?? ",p2.taille(), p3.taille());
-        assertEquals(" différence  sur la taille() ?? ",p3.taille(), p4.taille());
+        assertEquals(" difference sur la taille() ?? ",p1.taille(), p2.taille());
+        assertEquals(" difference sur la taille() ?? ",p2.taille(), p3.taille());
+        assertEquals(" difference  sur la taille() ?? ",p3.taille(), p4.taille());
 
     }
 }

@@ -1,18 +1,8 @@
 package question1;
 
 public class PolygoneRegulier {
-
     private int nombreDeCotes;
     private int longueurDuCote;
-
-    /**
-     * Création d'un polygone régulier
-     * 
-     * @param nombreDeCotes
-     *            (nombreDeCotes >=1 && nombreDeCotes <100)
-     * @param longueurDuCote
-     *            (longueurDuCote>=1 && longueurDuCote < 10000)
-     */
     public PolygoneRegulier(int nombreDeCotes, int longueurDuCote) {
         assert nombreDeCotes >= 1 && nombreDeCotes < 100;
         assert longueurDuCote >= 1 && longueurDuCote < 10000;
@@ -45,7 +35,6 @@ public class PolygoneRegulier {
 
     public int hashCode() {
         return nombreDeCotes * 10000 + longueurDuCote;
-        // ou bien return toString().hashCode(); // ou
     }
 
     public String toString() {
